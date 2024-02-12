@@ -1,0 +1,38 @@
+{
+  "bakeryswap": {
+    "url":"https://www.bakeryswap.org/#/swap",
+    "output_button": "//*[@id=\"swap-currency-output\"]/div/div[2]/button",
+    "input_button": "//*[@id=\"swap-currency-input\"]/div/div[2]/button",
+    "visible_coins": "/html/body/reach-portal[1]/div[3]/div/div/div/div/div[3]/div[1]/div",
+    "search_token": "//*[@id='token-search-input']",
+    "token_input": "//*[@id=\"swap-currency-input\"]/div/div[2]/input",
+    "token_output": "//*[@id=\"swap-currency-output\"]/div/div[2]/input",
+    "price_impact": "//*[@id=\"BodyContainer\"]/div/div[6]/div/div/div[2]/div[2]",
+    "element_number": 1,
+    "switch_button": "//*[@id=\"swap-page\"]/div[1]/div[2]/div/div",
+    "quote": "BNB"},
+  "knightswap": {
+    "url":"https://dex.knightswap.financial/#/swap",
+    "output_button": "//*[@id=\"swap-currency-output\"]/div/div[2]/button",
+    "input_button": "//*[@id=\"swap-currency-input\"]/div/div[2]/button/span",
+    "visible_coins": "/html/body/reach-portal[1]/div[3]/div/div/div/div/div[3]/div[1]/div",
+    "search_token": "//*[@id=\"token-search-input\"]",
+    "token_input": "//*[@id=\"swap-currency-input\"]/div/div[2]/input",
+    "token_output": "//*[@id=\"swap-currency-output\"]/div/div[2]/input",
+    "price_impact": "//*[@id=\"root\"]/div/div/div/div[2]/div/div[5]/div/div/div/div[2]/div[2]",
+    "element_number": 1,
+    "switch_button": "//*[@id=\"swap-page\"]/div[2]/div[1]/div[2]/div/div/button",
+    "quote": "BNB"},
+  "babyswap":  {
+    "url": "https://exchange.babyswap.finance/#/swap",
+    "output_button": "//*[@id=\"swap-currency-output\"]/div/div[2]/button",
+    "input_button": "//*[@id=\"swap-currency-input\"]/div/div[2]/button",
+    "visible_coins": "/html/body/reach-portal/div[3]/div/div/div/div/div[3]/div[1]/div",
+    "search_token": "//*[@id=\"token-search-input\"]",
+    "token_input": "//*[@id=\"swap-currency-input\"]/div/div[2]/input",
+    "token_output": "//*[@id=\"swap-currency-output\"]/div/div[2]/input",
+    "price_impact": "//*[@id=\"root\"]/div[2]/div[1]/div[2]/div/div[7]/div/div[1]/div/div[2]/div[2]",
+    "element_number": 2,
+    "switch_button": "//*[@id=\"swap-page\"]/div[2]/div[1]/div[2]/div/div/button",
+    "quote": "USDT"}
+}

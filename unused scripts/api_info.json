@@ -1,0 +1,144 @@
+{
+    "XT": {
+      "tickers_url": "https://www.xt.pub/exchange/api/markets/returnTicker",
+      "sorting_out_tickers": "tickers",
+      "for_price": "tickers[ticker]['last']",
+      "for_volume": "tickers[ticker]['baseVolume']",
+      "for_pair_name": "ticker.replace('_', r'/')"},
+    "OKX": {
+      "tickers_url": "https://www.okx.com/api/v5/market/tickers?instType=SPOT",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['last']",
+      "for_volume": "ticker['vol24h']",
+      "for_pair_name": "ticker['instId'].replace('-', r'/')"},
+    "MEXC": {
+      "tickers_url": "https://www.mexc.com/open/api/v2/market/ticker",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['last']",
+      "for_volume": "ticker['volume']",
+      "for_pair_name": "ticker['symbol'].replace('_', r'/')"},
+    "WhiteBit": {
+      "tickers_url": "https://whitebit.com/api/v4/public/ticker",
+      "sorting_out_tickers": "tickers",
+      "for_price": "tickers[ticker]['last_price']",
+      "for_volume": "tickers[ticker]['base_volume']",
+      "for_pair_name": "ticker.replace('_', r'/')"},
+    "Kucoin": {
+      "tickers_url": "https://api.kucoin.com/api/v1/market/allTickers",
+      "sorting_out_tickers": "tickers['data']['ticker']",
+      "for_price": "ticker['last']",
+      "for_volume": "ticker['vol']",
+      "for_pair_name": "ticker['symbol'].replace('-', r'/')"},
+    "HotCoin": {
+      "tickers_url": "https://api.hotcoinfin.com/v1/market/ticker",
+      "sorting_out_tickers": "tickers['ticker']",
+      "for_price": "ticker['last']",
+      "for_volume": "ticker['vol']",
+      "for_pair_name": "ticker['symbol'].upper().replace('_', r'/')"},
+    "Bybit": {
+      "tickers_url": "https://api.bybit.com/spot/quote/v1/ticker/24hr",
+      "symbols_url": "https://api.bybit.com/spot/v1/symbols",
+      "for_price": "ticker['lastPrice']",
+      "for_volume": "ticker['volume']",
+      "check_1": "symbol['name']",
+      "check_2": "ticker['symbol']",
+      "for_pair_name": "symbol['baseCurrency'] + '/' + symbol['quoteCurrency']",
+      "sorting_out_symbols": "symbols['result']",
+      "sorting_out_tickers": "tickers['result']"},
+    "Huobi": {
+      "tickers_url": "https://api.huobi.com/market/tickers",
+      "symbols_url": "https://api.huobi.com/v2/settings/common/symbols",
+      "for_price": "ticker['bid']",
+      "for_volume": "ticker['amount']",
+      "check_1": "symbol['sc']",
+      "check_2": "ticker['symbol']",
+      "for_pair_name": "symbol['bcdn'] + '/' + symbol['qcdn']",
+      "sorting_out_symbols": "symbols['data']",
+      "sorting_out_tickers": "tickers['data']"},
+    "Bitrue": {
+      "tickers_url": "https://openapi.bitrue.com/api/v1/ticker/24hr",
+      "symbols_url": "https://openapi.bitrue.com/api/v1/exchangeInfo",
+      "for_price": "ticker['lastPrice']",
+      "for_volume": "ticker['volume']",
+      "check_1": "symbol['symbol']",
+      "check_2": "ticker['symbol']",
+      "for_pair_name": "symbol['baseAsset'].upper() + '/' + symbol['quoteAsset'].upper()",
+      "sorting_out_symbols": "symbols['symbols']",
+      "sorting_out_tickers": "tickers"},
+    "Lbank": {
+      "tickers_url": "https://api.lbkex.com/v1/ticker.do?symbol=all",
+      "sorting_out_tickers": "tickers",
+      "for_price": "ticker['ticker']['latest']",
+      "for_volume": "ticker['ticker']['vol']",
+      "for_pair_name": "ticker['symbol'].replace('_', r'/').upper()"},
+    "AscendEX": {
+      "tickers_url": "https://ascendex.com/api/pro/v1/spot/ticker",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['close']",
+      "for_volume": "ticker['volume']",
+      "for_pair_name": "ticker['symbol']"},
+    "BigONE": {
+      "tickers_url": "https://big.one/api/v3/asset_pairs/tickers",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['close']",
+      "for_volume": "ticker['volume']",
+      "for_pair_name": "ticker['asset_pair_name'].replace('-', '/')"
+    },
+    "BKEX": {
+      "tickers_url": "https://api.bkex.com/v2/q/tickers",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['close']",
+      "for_volume": "ticker['volume']",
+      "for_pair_name": "ticker['symbol'].replace('_', '/')"
+    },
+    "BingX": {
+      "tickers_url": "https://api-swap-rest.bingbon.pro/api/v1/market/getTicker",
+      "sorting_out_tickers": "tickers['data']['tickers']",
+      "for_price": "ticker['lastPrice']",
+      "for_volume": "ticker['volume']",
+      "for_pair_name": "ticker['symbol'].replace('-', '/')"
+    },
+    "BitWell": {
+      "tickers_url": "https://openapi.bitwellex.com/pub/openapi/v1/hq/quote?symbol=BTC_USDT,ETH_USDT,WELL_USDT,FIRO_USDT,FLOKI-M_USDT,INV_USDT,WTN_USDT,GVR-M_USDT,BNB_USDT,DOLA_USDT,PEOPLE_USDT,SYP_USDT,SHIB-M_USDT,SOFI_USDT,CAKE_USDT,DFA_USDT,LOOKS_USDT,XRP_USDT,DOT_USDT,GHC-M_USDT,HT_USDT,RSS3_USDT,STORE_USDT,AVAX_USDT,MBOX_USDT,DYDX_USDT,TRX_USDT,MATIC_USDT,MASK_USDT,ALICE_USDT,ANON_USDT,GCOIN_USDT,METIS_USDT,MIX_USDT,NYM_USDT,RPG_USDT,SAND_USDT,STRM_USDT,SUKU_USDT,USDC_USDT,LUNR_USDT,RACA_USDT,VR_USDT,KAI_USDT,PIT-M_USDT,GM_USDT,ILV_USDT,BUSD_USDT,UNI_USDT,DOGE_USDT,APE_USDT,ACH_USDT,LTC_USDT,LINK_USDT,APECOIN_USDT,BCH_USDT,FTM_USDT,LAT_USDT,PRX_USDT,XCV_USDT,XWG_USDT,AXS_USDT,FOR_USDT",
+      "sorting_out_tickers": "tickers['data']",
+      "for_price": "ticker['trade']",
+      "for_volume": "ticker['volume_24']",
+      "for_pair_name": "ticker['symbol'].replace('_', '/')"
+    },
+    "DigiFinex": {
+      "tickers_url": "https://openapi.digifinex.com/v3/ticker",
+      "sorting_out_tickers": "tickers['ticker']",
+      "for_price": "ticker['last']",
+      "for_volume": "ticker['vol']",
+      "for_pair_name": "ticker['symbol'].replace('_', '/').upper()"
+    },
+    "FMFW": {
+      "tickers_url": "https://api.fmfw.io/api/3/public/ticker",
+      "symbols_url": "https://api.fmfw.io/api/3/public/symbol",
+      "for_price": "tickers[ticker]['last']",
+      "for_volume": "tickers[ticker]['volume']",
+      "check_1": "symbol",
+      "check_2": "ticker",
+      "for_pair_name": "symbols[symbol]['base_currency'] + '/' + symbols[symbol]['quote_currency']",
+      "sorting_out_symbols": "symbols",
+      "sorting_out_tickers": "tickers"
+    },
+    "Billance": {
+      "tickers_url": "https://openapi.billance.com/spot/api/spot/market/ticker",
+      "sorting_out_tickers": "tickers",
+      "for_price": "tickers[ticker]['last_price']",
+      "for_volume": "tickers[ticker]['base_volume']",
+      "for_pair_name": "ticker.replace('_', r'/')"
+    },
+    "AAX": {
+      "tickers_url": "https://api.aax.com/v2/market/tickers",
+      "symbols_url": "https://api.aax.com/v2/instruments",
+      "for_price": "ticker['c']",
+      "for_volume": "ticker['q']",
+      "check_1": "symbol['symbol']",
+      "check_2": "ticker['s']",
+      "for_pair_name": "symbol['base'] + '/' + symbol['quote']",
+      "sorting_out_symbols": "symbols['data']",
+      "sorting_out_tickers": "tickers['tickers']"
+    }
+}
